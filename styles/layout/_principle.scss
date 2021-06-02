@@ -1,0 +1,52 @@
+.principle{
+    padding: 1.5rem 2rem;
+
+    & > *{
+        margin: 2rem 0;
+    }
+
+    &__list{
+        list-style-type: none;
+        counter-reset:item;
+
+        & li{
+            padding: 1.5rem;
+            background-color: rgb(246,246,246);
+            border-radius: 1.5rem;
+            margin: 1rem 0;
+            position: relative;
+            box-shadow: 3px 2px 6px rgba(0,0,0,.1);
+            font-weight: bold;
+
+            & .fas{
+                margin: 0 1rem;
+            }
+
+            &:hover{
+                background-color: lighten($primaryColor,35%);
+
+                & .fas{
+                    color: $primaryColor;
+                }
+            }
+
+            &::before{
+                counter-increment: item;
+                content:counter(item);
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(-50%,-50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 25px;
+                height: 25px;
+                background-color: $primaryColor;
+                border-radius: 50%;
+                color: #fff;
+            }
+        }
+    }
+
+}

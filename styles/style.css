@@ -345,4 +345,17 @@ template {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
+.localization {
+  height: 50px;
+  background-color: #eaeaea;
+  font-family: Roboto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.localization .fas {
+  margin-right: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */

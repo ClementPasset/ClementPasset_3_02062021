@@ -1,0 +1,18 @@
+.book{
+    background-color: rgb(246,246,246);
+    padding: 1.5rem;
+    text-align: center;
+
+    &__title{
+        padding: 1rem;
+        font-weight: bold;
+    }
+
+    &__text{
+        color: rgba(0,0,0,.6);
+    }
+
+    &>*{
+        margin: 1rem;
+    }
+}

@@ -337,6 +337,28 @@ template {
   display: none;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: roboto;
+}
+
+.btn {
+  color: #fff;
+  border: none;
+  background: linear-gradient(to bottom, #ff79da, #9356dc);
+  padding: 1rem 1.5rem;
+  border-radius: 4rem;
+  width: fit-content;
+  display: inline-block;
+  cursor: pointer;
+}
+.btn:hover {
+  background: linear-gradient(to bottom, #ff8de0, #9e67e0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .header {
   height: 75px;
   display: flex;
@@ -348,7 +370,6 @@ template {
 .localization {
   height: 50px;
   background-color: #eaeaea;
-  font-family: Roboto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -356,6 +377,22 @@ template {
 }
 .localization .fas {
   margin-right: 10px;
+}
+
+.book {
+  background-color: #f6f6f6;
+  padding: 1.5rem;
+  text-align: center;
+}
+.book__title {
+  padding: 1rem;
+  font-weight: bold;
+}
+.book__text {
+  color: rgba(0, 0, 0, 0.6);
+}
+.book > * {
+  margin: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

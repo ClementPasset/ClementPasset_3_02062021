@@ -1,0 +1,28 @@
+.footer{
+    color:#fff;
+    background-color: rgb(53,53,53);
+    padding: 1.5rem;
+
+    &__title{
+        font-family: shrikhand;
+    }
+
+    &__links{
+        padding: 1rem 0;
+    }
+
+    &__link{
+        list-style-type: none;
+        padding: .5rem 0;
+
+        & a{
+            text-decoration: none;
+            color:inherit;
+        }
+
+        & i{
+            margin-right: 1rem;
+        }
+    }
+
+}

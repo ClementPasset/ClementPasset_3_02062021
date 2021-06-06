@@ -1,0 +1,32 @@
+.heartAnim{
+    width: fit-content;
+    position: relative;
+}
+.coeur{
+    font-size: 1.5rem;
+    background: white;
+    width: fit-content;
+    -webkit-background-clip:text;
+    color:transparent;
+    cursor: pointer;
+    position: absolute;
+}
+.coeur::after{
+    content:"\f004";
+    position: absolute;
+    color: black;
+    left: -4px;
+    top:-4px;
+    font-size: 2rem;
+    z-index: -1;
+}
+.coeur:hover{
+    background: linear-gradient(to bottom left, #9356dc, #ff79da);
+    -webkit-background-clip:text;
+    font-size: 2rem;
+    left: -4px;
+    top: -4px;
+}
+.coeur:hover::after{
+    display: none;
+}

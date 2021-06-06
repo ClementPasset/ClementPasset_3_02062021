@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -360,6 +361,43 @@ template {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
 }
 
+.heartAnim {
+  width: fit-content;
+  position: relative;
+}
+
+.coeur {
+  font-size: 1.5rem;
+  background: white;
+  width: fit-content;
+  -webkit-background-clip: text;
+  color: transparent;
+  cursor: pointer;
+  position: absolute;
+}
+
+.coeur::after {
+  content: "";
+  position: absolute;
+  color: black;
+  left: -4px;
+  top: -4px;
+  font-size: 2rem;
+  z-index: -1;
+}
+
+.coeur:hover {
+  background: linear-gradient(to bottom left, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  font-size: 2rem;
+  left: -4px;
+  top: -4px;
+}
+
+.coeur:hover::after {
+  display: none;
+}
+
 .card {
   position: relative;
   border-radius: 1rem;
@@ -374,12 +412,19 @@ template {
 }
 .card__body {
   height: 60px;
+  position: relative;
 }
 .card__title {
   padding: 0.5rem 1rem 0.2rem;
 }
 .card__location {
   padding: 0.2rem 1rem 0.5rem;
+}
+.card__likeBtn {
+  position: absolute;
+  right: 48px;
+  bottom: 48px;
+  transform: translate(-100%, -100%);
 }
 .card--new::after {
   content: "Nouveau";

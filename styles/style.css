@@ -384,6 +384,7 @@ template {
   top: -4px;
   font-size: 2rem;
   z-index: -1;
+  transition: color 0.3s ease-in-out;
 }
 
 .coeur:hover {
@@ -395,7 +396,10 @@ template {
 }
 
 .coeur:hover::after {
-  display: none;
+  z-index: 1000;
+  color: transparent;
+  left: 0;
+  top: 0;
 }
 
 .card {
@@ -492,8 +496,12 @@ template {
   90% {
     opacity: 1;
   }
+  99% {
+    z-index: 1000;
+  }
   100% {
     opacity: 0;
+    z-index: -1000;
   }
 }
 .header {

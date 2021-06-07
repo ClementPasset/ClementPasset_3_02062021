@@ -442,6 +442,21 @@ template {
   background-color: #99e2d0;
 }
 
+@media only screen and (min-width:600px) {
+  .card {
+    flex: 0 0 40%;
+  }
+}
+@media only screen and (min-width:900px) {
+  .card {
+    flex: 0 0 28%;
+  }
+}
+@media only screen and (min-width:1400px) {
+  .card {
+    flex: 0 0 20%;
+  }
+}
 .loader {
   position: fixed;
   z-index: 1000;
@@ -593,6 +608,16 @@ template {
   margin: 2rem 0;
 }
 
+@media only screen and (min-width:600px) {
+  .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .restaurants h2 {
+    flex: 0 0 100%;
+  }
+}
 .footer {
   color: #fff;
   background-color: #353535;

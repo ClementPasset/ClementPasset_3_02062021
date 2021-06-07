@@ -43,3 +43,21 @@
         background-color: rgb(153,226,208);
     }
 }
+
+@media #{$small-up}{
+    .card{
+        flex: 0 0 40%;
+    }
+}
+
+@media #{$medium-up}{
+    .card{
+        flex: 0 0 28%;
+    }
+}
+
+@media #{$large-up}{
+    .card{
+        flex: 0 0 20%;
+    }
+}

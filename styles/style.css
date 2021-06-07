@@ -343,6 +343,12 @@ template {
   padding: 0;
   box-sizing: border-box;
   font-family: roboto;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .btn {
@@ -406,6 +412,7 @@ template {
   position: relative;
   border-radius: 1rem;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }
 .card__img {
   width: 100%;
@@ -442,12 +449,12 @@ template {
   background-color: #99e2d0;
 }
 
-@media only screen and (min-width:600px) {
+@media only screen and (min-width:700px) {
   .card {
     flex: 0 0 40%;
   }
 }
-@media only screen and (min-width:900px) {
+@media only screen and (min-width:1000px) {
   .card {
     flex: 0 0 28%;
   }
@@ -462,7 +469,7 @@ template {
   z-index: 1000;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.95);
   animation: 1.5s linear loader forwards;
 }
 .loader::after {
@@ -539,6 +546,11 @@ template {
   margin-right: 10px;
 }
 
+@media only screen and (min-width:1000px) {
+  .presentation {
+    display: flex;
+  }
+}
 .book {
   background-color: #f6f6f6;
   padding: 1.5rem;
@@ -555,6 +567,16 @@ template {
   margin: 1rem;
 }
 
+@media only screen and (min-width:1000px) {
+  .book {
+    padding: 1rem;
+    flex: 0 0 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .principle {
   padding: 1.5rem 2rem;
 }
@@ -600,6 +622,25 @@ template {
   color: #fff;
 }
 
+@media only screen and (min-width:1000px) {
+  .principle {
+    padding: 2rem 1rem;
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 3px dashed #99e2d0;
+  }
+  .principle > * {
+    margin: unset;
+  }
+  .principle__title {
+    align-self: center;
+  }
+  .principle__list {
+    padding: 0 1.5rem;
+  }
+}
 .restaurants {
   padding: 1.5rem;
   background-color: #f6f6f6;
@@ -608,7 +649,7 @@ template {
   margin: 2rem 0;
 }
 
-@media only screen and (min-width:600px) {
+@media only screen and (min-width:700px) {
   .restaurants {
     display: flex;
     flex-wrap: wrap;

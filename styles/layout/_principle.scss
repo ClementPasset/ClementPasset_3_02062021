@@ -50,3 +50,25 @@
     }
 
 }
+@media #{$medium-up}{
+    .principle{        
+        padding: 2rem 1rem;
+        flex:0 0 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-left: 3px dashed $tertiaryColor;
+
+        & > *{
+            margin: unset;
+        }
+
+        &__title{
+            align-self: center;
+        }
+
+        &__list{
+            padding: 0 1.5rem;
+        }
+    }
+}

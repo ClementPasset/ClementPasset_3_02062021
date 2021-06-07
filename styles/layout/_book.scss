@@ -16,3 +16,13 @@
         margin: 1rem;
     }
 }
+@media #{$medium-up}{
+    .book{
+        padding: 1rem;
+        flex:0 0 50%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

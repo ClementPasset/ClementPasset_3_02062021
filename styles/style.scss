@@ -5,6 +5,7 @@
 @import 'components/button';
 @import 'components/heartButton';
 @import 'components/card';
+@import 'components/menuCard';
 @import 'components/loader';
 @import 'layout/header';
 @import 'layout/localization';
@@ -13,3 +14,5 @@
 @import 'layout/principle';
 @import 'layout/restaurants';
 @import 'layout/footer';
+@import 'pages/restaurantPhoto';
+@import 'pages/restaurantMenu';

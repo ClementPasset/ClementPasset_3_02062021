@@ -1,0 +1,44 @@
+.restaurantMenu{
+    background-color: rgb(246,246,246);
+    width: 100%;
+    position: relative;
+    top:-3rem;
+    border-radius: 2rem 2rem 0 0;
+    padding: 1rem 1rem 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+
+    &__name{
+        font-family: Shrikhand;
+        font-size: 1.5rem;
+        position: relative;
+        margin: 1rem 0 2rem 0;
+
+        & > .heartAnim{
+            top:0;
+            right: 3rem;
+        }
+    }
+
+    &__title{
+        text-transform: uppercase;
+        margin: 1rem 0;
+        font-size: 1rem;
+        position: relative;
+        
+        &::after{
+            content: '';
+            width: 40px;
+            height: 4px;
+            background-color: $tertiaryColor;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+        }
+    }
+
+    &__list{
+        list-style-type: none;
+        padding: 1rem 0;
+    }
+}

@@ -1,0 +1,94 @@
+.menuCard{
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0,0,0,.2);
+    margin-bottom: 1rem;
+    overflow: hidden;
+
+    &__title{
+        margin-bottom: .5rem;
+    }
+
+    &__text{
+        width: fit-content;
+        white-space: nowrap;
+        overflow:hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__price{
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        font-weight: bold;
+    }
+
+    &:hover &__price{
+        animation: .6s deplacer ease-in-out forwards;
+    }
+
+    &:hover &__text{
+        animation: .6s reduire ease-in-out forwards;
+    }
+
+    &__check{
+        background-color: $tertiaryColor;
+        height: 100%;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -60px;
+        transform: translate(60px);
+    }
+
+    &__rotation{
+        background-color: #fff;
+        color:$tertiaryColor;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover &__check{
+        animation: .6s deplacer ease-in-out forwards;
+    }
+
+    &:hover &__rotation{
+        animation: .6s tourner ease-in-out;
+    }
+}
+
+@keyframes tourner{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
+@keyframes deplacer{
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-60px);
+    }
+}
+@keyframes reduire{
+    from{
+        width: 100%;
+    }
+    to{
+        width: calc(100% - 100px);
+    }
+}

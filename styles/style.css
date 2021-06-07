@@ -355,12 +355,14 @@ a {
   color: #fff;
   border: none;
   background: linear-gradient(to bottom, #ff79da, #9356dc);
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   border-radius: 4rem;
   width: fit-content;
   display: inline-block;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  align-self: center;
 }
 .btn:hover {
   background: linear-gradient(to bottom, #ff8de0, #9e67e0);
@@ -462,6 +464,91 @@ a {
 @media only screen and (min-width:1400px) {
   .card {
     flex: 0 0 20%;
+  }
+}
+.menuCard {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+.menuCard__title {
+  margin-bottom: 0.5rem;
+}
+.menuCard__text {
+  width: fit-content;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menuCard__price {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  font-weight: bold;
+}
+.menuCard:hover .menuCard__price {
+  animation: 0.6s deplacer ease-in-out forwards;
+}
+.menuCard:hover .menuCard__text {
+  animation: 0.6s reduire ease-in-out forwards;
+}
+.menuCard__check {
+  background-color: #99e2d0;
+  height: 100%;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -60px;
+  transform: translate(60px);
+}
+.menuCard__rotation {
+  background-color: #fff;
+  color: #99e2d0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menuCard:hover .menuCard__check {
+  animation: 0.6s deplacer ease-in-out forwards;
+}
+.menuCard:hover .menuCard__rotation {
+  animation: 0.6s tourner ease-in-out;
+}
+
+@keyframes tourner {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes deplacer {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-60px);
+  }
+}
+@keyframes reduire {
+  from {
+    width: 100%;
+  }
+  to {
+    width: calc(100% - 100px);
   }
 }
 .loader {
@@ -688,6 +775,52 @@ a {
 }
 .footer__link i {
   margin-right: 1rem;
+}
+
+.restaurantPhoto {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.restaurantMenu {
+  background-color: #f6f6f6;
+  width: 100%;
+  position: relative;
+  top: -3rem;
+  border-radius: 2rem 2rem 0 0;
+  padding: 1rem 1rem 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.restaurantMenu__name {
+  font-family: Shrikhand;
+  font-size: 1.5rem;
+  position: relative;
+  margin: 1rem 0 2rem 0;
+}
+.restaurantMenu__name > .heartAnim {
+  top: 0;
+  right: 3rem;
+}
+.restaurantMenu__title {
+  text-transform: uppercase;
+  margin: 1rem 0;
+  font-size: 1rem;
+  position: relative;
+}
+.restaurantMenu__title::after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+}
+.restaurantMenu__list {
+  list-style-type: none;
+  padding: 1rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */

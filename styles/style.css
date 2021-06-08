@@ -490,6 +490,9 @@ a {
 .menuCard:nth-child(3) {
   animation: 0.8s cartes 1s ease-in-out forwards;
 }
+.menuCard:nth-child(4) {
+  animation: 0.8s cartes 1.3s ease-in-out forwards;
+}
 .menuCard__title {
   margin-bottom: 0.5rem;
 }

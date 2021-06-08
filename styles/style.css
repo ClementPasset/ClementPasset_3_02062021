@@ -835,8 +835,8 @@ a {
   background-color: #f6f6f6;
   width: 100%;
   position: relative;
-  top: -3rem;
-  /* margin-top: -3rem; */
+  /* top: -3rem; */
+  margin-top: -3rem;
   border-radius: 2rem 2rem 0 0;
   padding: 1rem 1rem 3rem 1rem;
   display: flex;

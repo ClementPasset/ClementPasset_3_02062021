@@ -351,6 +351,10 @@ a {
   color: inherit;
 }
 
+*::selection {
+  background-color: #99e2d0;
+}
+
 .btn {
   color: #fff;
   border: none;
@@ -469,27 +473,39 @@ a {
 .menuCard {
   background-color: #fff;
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 0.8rem;
   position: relative;
-  cursor: pointer;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   margin-bottom: 1rem;
   overflow: hidden;
+  top: 30px;
+  opacity: 0;
+}
+.menuCard:nth-child(1) {
+  animation: 0.8s cartes 0.4s ease-in-out forwards;
+}
+.menuCard:nth-child(2) {
+  animation: 0.8s cartes 0.7s ease-in-out forwards;
+}
+.menuCard:nth-child(3) {
+  animation: 0.8s cartes 1s ease-in-out forwards;
 }
 .menuCard__title {
   margin-bottom: 0.5rem;
 }
 .menuCard__text {
-  width: fit-content;
+  width: calc(100% - 30px);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  animation: 0.6s agrandir ease-in-out forwards;
 }
 .menuCard__price {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
   font-weight: bold;
+  animation: 0.6s deplacerReverse ease-in-out forwards;
 }
 .menuCard:hover .menuCard__price {
   animation: 0.6s deplacer ease-in-out forwards;
@@ -499,6 +515,7 @@ a {
 }
 .menuCard__check {
   background-color: #99e2d0;
+  cursor: pointer;
   height: 100%;
   width: 60px;
   display: flex;
@@ -509,6 +526,7 @@ a {
   bottom: 0;
   right: -60px;
   transform: translate(60px);
+  animation: 0.6s deplacerReverse ease-in-out forwards;
 }
 .menuCard__rotation {
   background-color: #fff;
@@ -543,12 +561,38 @@ a {
     transform: translate(-60px);
   }
 }
-@keyframes reduire {
+@keyframes deplacerReverse {
   from {
-    width: 100%;
+    transform: translate(-60px);
   }
   to {
-    width: calc(100% - 100px);
+    transform: translate(0);
+  }
+}
+@keyframes reduire {
+  from {
+    width: calc(100% - 30px);
+  }
+  to {
+    width: calc(100% - 90px);
+  }
+}
+@keyframes agrandir {
+  from {
+    width: calc(100% - 90px);
+  }
+  to {
+    width: calc(100% - 30px);
+  }
+}
+@keyframes cartes {
+  0% {
+    top: 30px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
   }
 }
 .loader {
@@ -808,6 +852,7 @@ a {
   margin: 1rem 0;
   font-size: 1rem;
   position: relative;
+  animation: 1.8s titresMenu ease-in-out forwards;
 }
 .restaurantMenu__title::after {
   content: "";
@@ -821,6 +866,15 @@ a {
 .restaurantMenu__list {
   list-style-type: none;
   padding: 1rem 0;
+}
+
+@keyframes titresMenu {
+  from {
+    transform: translate(-200%);
+  }
+  to {
+    transform: translate(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -25,6 +25,7 @@
         margin: 1rem 0;
         font-size: 1rem;
         position: relative;
+        animation: 1.8s titresMenu  ease-in-out forwards;
         
         &::after{
             content: '';
@@ -40,5 +41,14 @@
     &__list{
         list-style-type: none;
         padding: 1rem 0;
+    }
+}
+
+@keyframes titresMenu{
+    from{
+        transform: translate(-200%);
+    }
+    to{
+        transform: translate(0);
     }
 }

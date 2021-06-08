@@ -2,7 +2,7 @@
     background-color: rgb(246,246,246);
     width: 100%;
     position: relative;
-    top:-3rem;
+    margin-top: -3rem;
     border-radius: 2rem 2rem 0 0;
     padding: 1rem 1rem 3rem 1rem;
     display: flex;
@@ -42,13 +42,59 @@
         list-style-type: none;
         padding: 1rem 0;
     }
+
+}
+
+@media #{$small-up}{
+    .restaurantMenu{
+        &__name{
+            text-align: center;
+        }
+
+        &__title{
+            text-align: center;
+        }
+        &__title::after{
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        &__list{
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+    }
+}
+
+@media #{$large-up}{
+    .restaurantMenu{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        &__name{
+            flex: 0 0 100%;
+        }
+
+        &__bouton{
+            flex:0 0 20%;
+            margin-top: 2rem;
+        }
+
+        & section{
+            flex:0 0 30%;
+        }
+    }
 }
 
 @keyframes titresMenu{
     from{
-        transform: translate(-200%);
+        transform: translate(-100%);
+        opacity: 0;
     }
     to{
         transform: translate(0);
+        opacity: 1;
     }
 }

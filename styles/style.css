@@ -389,7 +389,7 @@ a {
 }
 
 .coeur::after {
-  content: "";
+  content: "\f004";
   position: absolute;
   color: black;
   left: -4px;

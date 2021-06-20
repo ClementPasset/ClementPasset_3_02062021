@@ -355,6 +355,10 @@ a {
   background-color: #99e2d0;
 }
 
+button {
+  border: none;
+}
+
 .btn {
   color: #fff;
   border: none;
@@ -389,7 +393,7 @@ a {
 }
 
 .coeur::after {
-  content: "\f004";
+  content: "";
   position: absolute;
   color: black;
   left: -4px;
